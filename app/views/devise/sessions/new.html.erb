@@ -1,0 +1,33 @@
+<div class="col-md-5 mx-auto mt-5 border py-5 px-4">
+<h2 class="mb-3 text-center">Log in</h2>
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class="mb-3">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control" %>
+  </div>
+
+  <div class="mb-3">
+    <%= f.label :password %><br />
+    <%= f.password_field :password, autocomplete: "current-password", class: "form-control" %>
+  </div>
+
+  <% unless devise_mapping.rememberable? %>
+    <div class="mb-3 form-check">
+      <%= f.check_box :remember_me, class:"form-check-input" %>
+      <%= f.label :remember_me, class:"form-check-label" %>
+    </div>
+  <% end %> 
+
+  <div class="d-flex justify-content-between">
+    <p> Don't have an account? <%= link_to "Sign up", new_registration_path(resource_name),  class: "text-primary" %></p>
+    <%= link_to "Forgot your password?", new_password_path(resource_name) %>
+  </div>
+
+  <div class="my-3">
+    <%= f.submit "Log in", class: "w-100 btn btn-primary" %>
+  </div>
+<% end %>
+
+<%= link_to "Didn't receive confirmation instructions?", new_confirmation_path(resource_name) %>
+</div>
