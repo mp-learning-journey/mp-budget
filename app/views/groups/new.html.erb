@@ -1,0 +1,26 @@
+<div class="w-50 mx-auto my-5 ">
+    <h1 class="text-center">Create New Category</h1>
+
+    <%= form_with model: @groups, class: "form mt-5", data: { turbo:false}, local: true do |f| %>
+
+        <% if @food.errors.any? %>
+            <div class="alert alert-danger">
+                <% @food.errors.full_messages.each do |message| %>
+                    <div><%= message.inspect %></div>
+                <% end %>
+            </div>
+        <% end %>
+        
+        <div class="mb-3">
+            <%= f.label :name %><br>
+            <%= f.text_field :name, placeholder: "Enter category name", class: "form-control", required: true %>
+        </div>
+
+        <div class="mb-3">
+            <%= f.label :icon %><br>
+            <%= f.file_field :icon, placeholder: "Upload category icon", class: "form-control", required: true %>
+        </div>
+        
+        <%= f.submit "Create Food", class: "btn btn-primary bg-gradient mt-2" %>
+    <% end %>
+</div>
