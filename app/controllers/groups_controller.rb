@@ -7,6 +7,10 @@ class GroupsController < ApplicationController
     @group = Group.new
   end
 
+  def show
+    @purchases = Group.find(params[:id]).purchases
+  end
+
   def create
     @group = current_user.groups.new(group_params)
     if @group.save
