@@ -2,7 +2,13 @@
     <div class="col-3">
         <%= image_tag(group.icon, class: "img-fluid") %>
     </div>
-    <div class="col-9">
-        <h4><%= group.name %></h4>
+    <div class="col-9 row">
+        <div class="col-9">
+            <h4><%= group.name %></h4>
+        </div>
+        <div class="col-3">
+           <h4><%= number_to_currency(2000) %></h4>
+        </div>
     </div>
+    
 <% end %>

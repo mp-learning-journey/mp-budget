@@ -14,20 +14,20 @@
  *= require_self
  */
 
- body{
-    background-color: #F0F2F1;
-    color: #434B54;
- }
+body {
+  background-color: #f0f2f1;
+  color: #434b54;
+}
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .categories a {
-color: #434B54;
+  color: #434b54;
 }
 
 .btn-default {
-    color: #fff;
-    background-color: #5fb523;
+  color: #fff;
+  background-color: #5fb523;
 }
