@@ -13,3 +13,21 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+  background-color: #f0f2f1;
+  color: #434b54;
+}
+
+a {
+  text-decoration: none;
+}
+
+.categories a {
+  color: #434b54;
+}
+
+.btn-default {
+  color: #fff;
+  background-color: #5fb523;
+}
