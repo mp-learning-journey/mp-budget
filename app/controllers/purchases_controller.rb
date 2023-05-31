@@ -1,7 +1,4 @@
 class PurchasesController < ApplicationController
-  def index
-    @groups = Purchase.find_by('group_id', params[:id])
-  end
 
   def new
     @id = params[:group_id]
@@ -11,7 +8,7 @@ class PurchasesController < ApplicationController
   def create
     @purchase = current_user.purchases.new(purchase_params)
     if @purchase.save
-      redirect_to authenticated_root_path, notice: 'Category created successful'
+      redirect_to authenticated_root_path, notice: 'Purchase created successful'
     else
       render :new
     end
@@ -20,6 +17,6 @@ class PurchasesController < ApplicationController
   protected
 
   def purchase_params
-    params.require(:purchase).permit(:group, :icon)
+    params.require(:purchase).permit(:group_id, :name, :amount)
   end
 end
