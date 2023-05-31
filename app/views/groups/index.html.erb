@@ -1,5 +1,6 @@
-<%= link_to "Add New Category", new_group_path,  class: " btn btn-success bg-gradient mb-3" %>
-<h1>Categories</h1>
-<div class="row">
-    <%= render partial: "card", collection: @groups %>
+<div class="col-md-6 mx-auto">
+    <%= link_to "Add New Category", new_group_path,  class: " btn btn-default  bg-gradient mb-3" %>
+    <div class="categories">
+        <%= render @groups %>
+    </div>
 </div>

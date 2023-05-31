@@ -1,6 +1,8 @@
-<div class="col-md-4">
-    <%= image_tag(group.icon, class: "img-fluid") %>
-</div>
-<div class="col-md-8">
-    <h2><%= group.name %></h2>
-</div>
+<%= link_to new_group_path, class:"row mb-2 border align-items-center p-3 bg-white" do %>
+    <div class="col-3">
+        <%= image_tag(group.icon, class: "img-fluid") %>
+    </div>
+    <div class="col-9">
+        <h4><%= group.name %></h4>
+    </div>
+<% end %>
