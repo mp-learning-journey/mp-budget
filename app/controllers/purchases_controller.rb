@@ -5,7 +5,7 @@ class PurchasesController < ApplicationController
     end
     
     def new
-        @group = current_user.groups
+        @id = params[:group_id]
         @purchase = Purchase.new
     end
     

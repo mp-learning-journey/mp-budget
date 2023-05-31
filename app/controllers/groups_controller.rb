@@ -8,6 +8,7 @@ class GroupsController < ApplicationController
   end
 
   def show
+    @id = params[:id]
     @purchases = Group.find(params[:id]).purchases
   end
 
