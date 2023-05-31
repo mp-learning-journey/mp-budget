@@ -22,7 +22,10 @@
             <%= f.number_field :amount, placeholder: "Enter Amount in dollar", class: "form-control", required: true %>
         </div>
 
-        
+        <div class="mb-3">
+            <%= f.label :category %><br>
+            <%= f.collection_select :group_id, current_user.groups, :id, :name, {prompt: "Select Ingedient"}, {class: "form-select"} %>
+        </div>
         
         <%= f.submit "Create Category", class: "btn btn-default bg-gradient mt-2" %>
     <% end %>
