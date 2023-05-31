@@ -1,0 +1,6 @@
+<div class="col-md-6 mx-auto">
+    <%= link_to "Add New Purchase", new_group_path,  class: " btn btn-default  bg-gradient mb-3" %>
+    <div class="categories">
+        <%= render partial:"shared/card", collection: @purchases, as: :group %>
+    </div>
+</div>
