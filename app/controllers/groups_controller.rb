@@ -5,11 +5,11 @@ class GroupsController < ApplicationController
     end
 
     def new
-        @groups = Group.new
+        @group = Group.new
     end
 
     def create
-        @group = Group.new(group_params)
+        @group = current_user.groups.new(group_params)
         if @group.save
             redirect_to authenticated_root_path, notice: "Category created successful"
         else
