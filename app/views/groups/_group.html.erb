@@ -7,7 +7,7 @@
             <h4><%= group.name %></h4>
         </div>
         <div class="col-4">
-           <h4><%= number_to_currency(2000) %></h4>
+           <h4><%= number_to_currency(group.purchases.sum(:amount)) %></h4>
         </div>
     </div>
     

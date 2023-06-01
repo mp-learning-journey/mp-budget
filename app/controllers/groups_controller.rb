@@ -1,5 +1,5 @@
 class GroupsController < ApplicationController
-    before_action :set_group, except: [:index, :new, :create]
+  before_action :set_group, except: %i[index new create]
 
   def index
     @groups = current_user.groups

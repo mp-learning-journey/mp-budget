@@ -5,7 +5,7 @@
     <div class="col-9 d-flex">
         <div class="col-9">
             <h4><%= purchase.name %></h4>
-            <p><%= l(purchase.created_at, format: :only_date) %></p>
+            <p class="mt-4"><%= l(purchase.created_at, format: :only_date) %></p>
         </div>
         <div class="col-3">
            <h4><%= number_to_currency(purchase.amount) %></h4>

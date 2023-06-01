@@ -1,5 +1,4 @@
 class PurchasesController < ApplicationController
-
   def new
     @id = params[:group_id]
     @purchase = Purchase.new
