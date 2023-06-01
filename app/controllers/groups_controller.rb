@@ -8,11 +8,13 @@ class GroupsController < ApplicationController
 
   def new
     @group = Group.new
+    @page_name = "New Category"
   end
 
   def show
     @purchases = @group.purchases.order(created_at: :desc)
     @total = @purchases.sum(:amount)
+    @page_name = "Purchases"
   end
 
   def create
