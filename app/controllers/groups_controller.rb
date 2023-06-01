@@ -3,18 +3,18 @@ class GroupsController < ApplicationController
 
   def index
     @groups = current_user.groups
-    @page_name = "Categories"
+    @page_name = 'Categories'
   end
 
   def new
     @group = Group.new
-    @page_name = "New Category"
+    @page_name = 'New Category'
   end
 
   def show
     @purchases = @group.purchases.order(created_at: :desc)
     @total = @purchases.sum(:amount)
-    @page_name = "Purchases"
+    @page_name = 'Purchases'
   end
 
   def create

@@ -15,7 +15,7 @@
  */
 @font-face {
   font-family: 'Proxima Nova';
-  src: url('fonts/Proxima-Nova-Font.otf') format('truetype');
+  src: url('/assets/Proxima-Nova-Font.otf') format('truetype');
 }
 
 body {
@@ -69,7 +69,7 @@ ul {
 }
 
 .navbar {
-  background-color: #3778c2;
+  background: #3778c2;
   padding: 20px 0;
 }
 
@@ -123,6 +123,7 @@ input, select {
 .total {
   font-size: 17px !important;
   color: #545C67;
+  font-weight: bold;
 }
 
 .date {
