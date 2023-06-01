@@ -21,6 +21,7 @@ body {
 
 a {
   text-decoration: none;
+  color: #3778c2;
 }
 
 .categories a {
@@ -30,4 +31,9 @@ a {
 .btn-default {
   color: #fff;
   background-color: #5fb523;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #3778c2 !important;
 }

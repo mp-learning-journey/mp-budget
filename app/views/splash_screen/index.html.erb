@@ -1,1 +1,9 @@
-<h1>Splash screen</h1>
+<div class="col-md-6 mx-auto">
+    <div class="text-center">
+        <%= link_to "MP-Budget", user_signed_in? ? authenticated_root_path : unauthenticated_root_path, class: "navbar-brand me-5 border text-success p-5 bg-light bg-gradient rounded-circle" %>
+    </div>
+
+    <%= link_to "Sign Up", new_user_registration_path,  class: "btn btn-primary  bg-gradient mb-3 btn-lg mt-4" %>
+
+    <%= link_to "Sign In", new_user_session_path,  class: "btn btn-primary  bg-gradient mb-3 btn-lg mt-4" %>
+</div>
