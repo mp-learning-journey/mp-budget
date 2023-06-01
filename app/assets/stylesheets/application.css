@@ -101,10 +101,12 @@ ul {
 
 .page-title {
   color: #fff;
+  font-size: 20px;
 }
 
-input, select {
-  border-radius: 0px !important;
+input,
+select {
+  border-radius: 0 !important;
   border-top: 1px !important;
   border-right: 1px !important;
   border-left: 1px !important;
@@ -117,20 +119,16 @@ input, select {
 .title {
   font-size: 18px;
   font-weight: 400 !important;
-  color: #86898E;
+  color: #86898e;
 }
 
 .total {
   font-size: 17px !important;
-  color: #545C67;
+  color: #545c67;
   font-weight: bold;
 }
 
 .date {
-  color: #86898E;
+  color: #86898e;
   font-size: 15px;
-}
-
-.page-title {
-  font-size: 20px;
 }
