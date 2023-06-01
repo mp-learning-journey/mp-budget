@@ -108,3 +108,22 @@ input, select {
 .back {
   color: #3778c2;
 }
+
+.title {
+  font-size: 18px;
+  font-weight: 400 !important;
+  color: #86898E;
+}
+
+.total {
+  font-size: 17px !important;
+}
+
+.date {
+  color: #86898E;
+  font-size: 15px;
+}
+
+.page-title {
+  font-size: 20px;
+}

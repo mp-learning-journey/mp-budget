@@ -3,6 +3,7 @@ class GroupsController < ApplicationController
 
   def index
     @groups = current_user.groups
+    @page_name = "Categories"
   end
 
   def new
