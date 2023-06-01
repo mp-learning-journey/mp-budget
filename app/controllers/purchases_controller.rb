@@ -8,7 +8,7 @@ class PurchasesController < ApplicationController
   def create
     @purchase = current_user.purchases.new(purchase_params)
     if @purchase.save
-      redirect_to authenticated_root_path, notice: 'Purchase created successful'
+      redirect_to group_path(params[:group_id]), notice: 'Purchase created successful'
     else
       render :new
     end

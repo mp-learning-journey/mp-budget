@@ -1,0 +1,14 @@
+<%= link_to group_purchase_path(purchase.id), class:"row mb-2 border align-items-center p-3 bg-white" do %>
+    <div class="col-3">
+        <%= image_tag(group.icon, class: "img-fluid") %>
+    </div>
+    <div class="col-9 row">
+        <div class="col-9">
+            <h4><%= purchase.name %></h4>
+        </div>
+        <div class="col-3">
+           <h4><%= number_to_currency(purchase.amount) %></h4>
+        </div>
+    </div>
+    
+<% end %>

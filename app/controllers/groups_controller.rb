@@ -8,7 +8,8 @@ class GroupsController < ApplicationController
   end
 
   def show
-    @id = params[:id]
+    # @id = params[:id]
+    @group = Group.find(params[:id])
     @purchases = Group.find(params[:id]).purchases
   end
 
@@ -23,8 +24,8 @@ class GroupsController < ApplicationController
 
   protected
 
-  def set_groups
-    @groups = Group.find(params[:id])
+  def get_groups
+    @group = Group.find(params[:id])
   end
 
   def group_params
