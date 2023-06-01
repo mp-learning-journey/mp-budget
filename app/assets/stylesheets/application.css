@@ -21,13 +21,37 @@ body {
 
 a {
   text-decoration: none;
+  color: #3778c2;
 }
 
 .categories a {
   color: #434b54;
 }
 
+.btn {
+  border-radius: 0;
+}
+
 .btn-default {
   color: #fff;
   background-color: #5fb523;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #3778c2 !important;
+}
+
+.btn-outline-primary {
+  color: #3778c2;
+  background-color: transparent;
+  border-color: #3778c2 !important;
+}
+
+.splash {
+  height: calc(100vh - 100px);
+}
+
+.splash-logo {
+  height: calc(100vh - 400px);
 }
