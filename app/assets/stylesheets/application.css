@@ -13,15 +13,27 @@
  *= require_tree .
  *= require_self
  */
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('/assets/Proxima-Nova-Font.otf') format('truetype');
+}
 
 body {
+  font-family: 'Proxima Nova', sans-serif !important;
   background-color: #f0f2f1;
-  color: #434b54;
+  color: #434b54 !important;
+  margin: 0;
 }
 
 a {
   text-decoration: none;
   color: #3778c2;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 .categories a {
@@ -54,4 +66,69 @@ a {
 
 .splash-logo {
   height: calc(100vh - 400px);
+}
+
+.navbar {
+  background: #3778c2;
+  padding: 20px 0;
+}
+
+.nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-link {
+  display: none;
+}
+
+.bars {
+  display: flex;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 20px;
+  width: 28px;
+}
+
+.bars .bar-item {
+  border: 2px solid #fff;
+  border-radius: 2px;
+  transition: all 500ms ease-in-out 100ms;
+}
+
+.page-title {
+  color: #fff;
+  font-size: 20px;
+}
+
+input,
+select {
+  border-radius: 0 !important;
+  border-top: 1px !important;
+  border-right: 1px !important;
+  border-left: 1px !important;
+}
+
+.back {
+  color: #3778c2;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 400 !important;
+  color: #86898e;
+}
+
+.total {
+  font-size: 17px !important;
+  color: #545c67;
+  font-weight: bold;
+}
+
+.date {
+  color: #86898e;
+  font-size: 15px;
 }

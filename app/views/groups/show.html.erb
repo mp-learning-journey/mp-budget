@@ -1,8 +1,16 @@
 <div class="col-md-6 mx-auto">
-    <%= link_to "<< Back", authenticated_root_path,  class: " btn btn-default  bg-gradient mb-3" %>
-    <div class="d-flex justify-content-between bg-white mb-4 p-3 align-items-center">
-        <h2><%= @group.name %></h2>
-        <h4><%= number_to_currency(@total) %></h4>
+    <%= link_to "<< Back", authenticated_root_path,  class: "back" %>
+    <div class="d-flex justify-content-between bg-white mb-4 mt-2 p-2 align-items-center">
+        <div class="col-2 pe-1">
+            <%= image_tag(@group.icon, class: "img-fluid") %>
+        </div>
+        <div class="col-10 d-flex justify-content-between align-items-center">
+            <h2 class="title"><%= @group.name %></h2>
+            <div class="">
+                <p class="m-0 date">TOTAL:</p>
+                <h4 class="total"><%= number_to_currency(@total) %></h4>
+            </div>
+        </div>
     </div>
     <div class="categories">
         <%= render partial: "purchases/purchase", collection: @purchases, locals: {group: @group}  %>

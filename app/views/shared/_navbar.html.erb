@@ -1,31 +1,38 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary shadow">
-  <div class="container py-2">
-    <%= link_to "MP-Budget", user_signed_in? ? authenticated_root_path : unauthenticated_root_path, class: "navbar-brand me-5 border text-success p-2 bg-light bg-gradient rounded-circle" %>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+<nav class="navbar p-3 py-4">
+  <div class="mobile-overlay"></div>
+  <div class="mobile-foreground"></div>
+  <section class="col-md-6 nav">
+    <ul class="bars">
+      <li class="bar-item"></li>
+      <li class="bar-item"></li>
+      <li class="bar-item"></li>
+    </ul>
+    <h1 class="page-title"><%= @page_name.nil? ? "" : @page_name.upcase  %></h1>
+    <div class="text-white">
+      <% if user_signed_in? %>
         <li class="nav-item">
-          <%= link_to "Home", user_signed_in? ? authenticated_root_path : unauthenticated_root_path, class: "nav-link" %>
+          <%= button_to "Logout", destroy_user_session_path, class: "btn btn-outline-light btn-sm", method: :delete %>
         </li>
-      </ul>
-
-      <ul class="navbar-nav ms-auto mb2 mb-lg-0">
-        <% if user_signed_in? %>
-          <li class="nav-item pe-5 pt-2">
-            <p class="text-dark"><%= current_user.email %></p>
-          </li>
-          <li class="nav-item">
-            <%= button_to "Logout", destroy_user_session_path, class: "btn btn-outline-secondary", method: :delete %>
-          </li>
-        <% else %>
-          <li class="nav-item">
-            <%= link_to "Sign In", new_user_session_path,  class: "btn btn-outline-secondary" %>
-          </li>
-        <% end %>
-        
-      </ul>
+      <% else %>
+        <li class="nav-item">
+          <%= link_to "Login", new_user_session_path,  class: "btn btn-outline-light btn-sm" %>
+        </li>
+      <% end %>
     </div>
-  </div>
+    <ul class="nav-link">
+      <% if user_signed_in? %>
+        <li class="nav-item pe-5 pt-2">
+          <p class="text-dark"><%= current_user.email %></p>
+        </li>
+        <li class="nav-item">
+          <%= button_to "Logout", destroy_user_session_path, class: "btn btn-outline-secondary", method: :delete %>
+        </li>
+      <% else %>
+        <li class="nav-item">
+          <%= link_to "Sign In", new_user_session_path,  class: "btn btn-outline-secondary" %>
+        </li>
+      <% end %>
+      <li><a href="#">Profile</a></li>
+    </ul>
+  </section>
 </nav>

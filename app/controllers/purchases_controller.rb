@@ -2,6 +2,7 @@ class PurchasesController < ApplicationController
   def new
     @id = params[:group_id]
     @purchase = Purchase.new
+    @page_name = 'New Purchase'
   end
 
   def create

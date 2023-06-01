@@ -1,33 +1,30 @@
-<div class="col-md-5 mx-auto mt-5 border py-5 px-4">
+<div class="col-md-5 mx-auto bg-white pt-2">
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="mb-3">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control" %>
+  <div class="mb-4">
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control", placeholder: "Email" %>
   </div>
 
-  <div class="mb-3">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password", class: "form-control" %>
+  <div class="mb-4">
+    <%= f.password_field :password, autocomplete: "current-password", class: "form-control", placeholder: "Password" %>
   </div>
 
   <% unless devise_mapping.rememberable? %>
-    <div class="mb-3 form-check">
+    <div class="mb-4 form-check">
       <%= f.check_box :remember_me, class:"form-check-input" %>
       <%= f.label :remember_me, class:"form-check-label" %>
     </div>
   <% end %> 
 
   <div class="d-flex flex-wrap justify-content-between">
-    <p> Don't have an account? <%= link_to "Sign up", new_registration_path(resource_name) %></p>
+    <p class="ps-3"> Don't have an account? <%= link_to "Sign up", new_registration_path(resource_name) %></p>
   </div>
 
   <div class="my-3">
     <%= f.submit "Log in", class: "w-100 btn btn-primary" %>
   </div>
-
-  <p class="text-center"><%= link_to "Forgot password?", new_password_path(resource_name) %></p>
   
 <% end %>
 
 </div>
+<p class="text-center"><%= link_to "Forgot password?", new_password_path(resource_name) %></p>
