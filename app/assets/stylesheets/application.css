@@ -17,11 +17,18 @@
 body {
   background-color: #f0f2f1;
   color: #434b54;
+  margin: 0;
 }
 
 a {
   text-decoration: none;
   color: #3778c2;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 .categories a {
@@ -54,4 +61,39 @@ a {
 
 .splash-logo {
   height: calc(100vh - 400px);
+}
+
+.navbar {
+  background-color: #3778c2;
+  padding: 20px 0;
+}
+
+.nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-link {
+  display: none;
+}
+
+.bars {
+  display: flex;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 20px;
+  width: 28px;
+}
+
+.bars .bar-item {
+  border: 2px solid #fff;
+  border-radius: 2px;
+  transition: all 500ms ease-in-out 100ms;
+}
+
+.page-title {
+  color: #fff;
 }
