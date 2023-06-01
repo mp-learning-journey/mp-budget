@@ -1,12 +1,12 @@
-<%= link_to group_path(group.id), class:"row mb-2 border align-items-center p-3 bg-white" do %>
-    <div class="col-3">
+<%= link_to group_path(group.id), class:"d-flex mb-2 border align-items-center p-3 bg-white gap-2" do %>
+    <div class="col-2">
         <%= image_tag(group.icon, class: "img-fluid") %>
     </div>
-    <div class="col-9 row">
-        <div class="col-9">
+    <div class="col-10 d-flex">
+        <div class="col-8">
             <h4><%= group.name %></h4>
         </div>
-        <div class="col-3">
+        <div class="col-4">
            <h4><%= number_to_currency(2000) %></h4>
         </div>
     </div>

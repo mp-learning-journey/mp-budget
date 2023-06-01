@@ -31,3 +31,10 @@
 
 en:
   hello: "Hello world"
+  time:
+    formats:
+      default: "%Y-%m-%d %H:%M:%S"
+      short: "%d %b %H:%M"
+      long: "%d %B %Y %H:%M"
+      only_date: "%d %b %Y"
+      only_time: "%H:%M"

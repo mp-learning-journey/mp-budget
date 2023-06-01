@@ -1,6 +1,11 @@
 <div class="col-md-6 mx-auto">
-    <%= link_to "Add New Purchase", new_group_purchase_path(@group),  class: " btn btn-default  bg-gradient mb-3" %>
-    <div class="categories">
-        <%= render partial: "purchases/purchase", collection: @purchases, local: {group: @group}  %>
+    <div class="d-flex justify-content-between bg-white mb-4 p-3 align-items-center">
+        <h2><%= @group.name %></h2>
+        <h4><%= number_to_currency(@total) %></h4>
     </div>
+    <div class="categories">
+        <%= render partial: "purchases/purchase", collection: @purchases, locals: {group: @group}  %>
+    </div>
+
+    <%= link_to "Add New Purchase", new_group_purchase_path(@group),  class: " btn btn-default mt-3 bg-gradient btn-lg mb-3 w-100" %>
 </div>
