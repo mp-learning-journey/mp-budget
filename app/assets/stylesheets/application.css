@@ -98,9 +98,13 @@ ul {
   color: #fff;
 }
 
-input {
+input, select {
   border-radius: 0px !important;
   border-top: 1px !important;
   border-right: 1px !important;
   border-left: 1px !important;
+}
+
+.back {
+  color: #3778c2;
 }

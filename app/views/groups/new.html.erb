@@ -1,6 +1,6 @@
 <div class="col-md-6 mx-auto">
- <%= link_to "<< Back", authenticated_root_path,  class: " btn btn-default  bg-gradient" %>
-    <%= form_with model: @group, class: "form mt-2 bg-white p-3 ", data: { turbo:false}, local: true do |f| %>
+ <%= link_to "<< Back", authenticated_root_path,  class: "back" %>
+    <%= form_with model: @group, class: "form mt-3 bg-white pt-3 ", data: { turbo:false}, local: true do |f| %>
 
         <% if @group.errors.any? %>
             <div class="alert alert-danger">
@@ -15,7 +15,7 @@
         </div>
 
         <div class="mb-4">
-            <%= f.label :category_icon, class: "mb-2" %>
+            <%= f.label :upload_category_icon, class: "mb-2 ps-2" %>
             <%= f.file_field :icon, placeholder: "Upload category icon", class: "form-control", required: true %>
         </div>
         
