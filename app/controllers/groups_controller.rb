@@ -1,10 +1,17 @@
 class GroupsController < ApplicationController
+  before_action :set_group, except: %i[index new create]
+
   def index
     @groups = current_user.groups
   end
 
   def new
     @group = Group.new
+  end
+
+  def show
+    @purchases = @group.purchases.order(created_at: :desc)
+    @total = @purchases.sum(:amount)
   end
 
   def create
@@ -18,8 +25,8 @@ class GroupsController < ApplicationController
 
   protected
 
-  def set_groups
-    @groups = Group.find(params[:id])
+  def set_group
+    @group = Group.find(params[:id])
   end
 
   def group_params
