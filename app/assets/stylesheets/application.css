@@ -97,3 +97,10 @@ ul {
 .page-title {
   color: #fff;
 }
+
+input {
+  border-radius: 0px !important;
+  border-top: 1px !important;
+  border-right: 1px !important;
+  border-left: 1px !important;
+}
