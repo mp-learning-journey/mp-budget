@@ -1,10 +1,10 @@
 require 'rails_helper'
 
-describe 'Group index page', type: :feature do
+RSpec.describe 'Group index page', type: :feature do
   before(:each) do
     @user = User.create(
       name: 'name',
-      email: 'user@test.com',
+      email: 'user@test3.com',
       password: 'password',
       confirmed_at: Time.now
     )
@@ -26,7 +26,7 @@ describe 'Group index page', type: :feature do
 
     visit user_session_path
 
-    fill_in 'Email', with: 'user@test.com'
+    fill_in 'Email', with: 'user@test3.com'
     fill_in 'Password', with: 'password'
     click_button 'Log in'
 
@@ -47,13 +47,11 @@ describe 'Group index page', type: :feature do
 
   scenario 'When user clicks on New link, they should be redirected to the new group page' do
     click_link('New')
-
     expect(page).to have_current_path(new_group_path)
   end
 
   scenario 'When user clicks on a group, they are taken to the group page' do
     click_link('Test Group 0')
-
     expect(page).to have_current_path(group_path(@groups[0]))
   end
 end

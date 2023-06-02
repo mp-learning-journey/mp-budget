@@ -13,26 +13,7 @@
         <li class="nav-item">
           <%= button_to "Logout", destroy_user_session_path, class: "btn btn-outline-light btn-sm", method: :delete %>
         </li>
-      <% else %>
-        <li class="nav-item">
-          <%= link_to "Login", new_user_session_path,  class: "btn btn-outline-light btn-sm" %>
-        </li>
       <% end %>
     </div>
-    <ul class="nav-link">
-      <% if user_signed_in? %>
-        <li class="nav-item pe-5 pt-2">
-          <p class="text-dark"><%= current_user.email %></p>
-        </li>
-        <li class="nav-item">
-          <%= button_to "Logout", destroy_user_session_path, class: "btn btn-outline-secondary", method: :delete %>
-        </li>
-      <% else %>
-        <li class="nav-item">
-          <%= link_to "Sign In", new_user_session_path,  class: "btn btn-outline-secondary" %>
-        </li>
-      <% end %>
-      <li><a href="#">Profile</a></li>
-    </ul>
   </section>
 </nav>
