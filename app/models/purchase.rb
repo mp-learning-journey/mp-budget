@@ -4,5 +4,5 @@ class Purchase < ApplicationRecord
 
   validates :name, presence: true, length: { maximum: 50 }
   validates :amount, presence: true, numericality: { greater_than: 0 }
-  validates :groups, presence: true, length: { minimum: 1 }
+  validates :group, presence: true, length: { minimum: 1 }
 end

@@ -12,15 +12,15 @@
         <% end %>
         
         <div class="mb-4">
-            <%= f.text_field :name, placeholder: "Enter name", class: "form-control", required: true %>
+            <%= f.text_field :name, id: "name", placeholder: "Enter name", class: "form-control", required: true %>
         </div>
 
         <div class="mb-4">
-            <%= f.number_field :amount, placeholder: "Enter Amount in dollar", class: "form-control", required: true %>
+            <%= f.number_field :amount, id: "amount", placeholder: "Enter Amount in dollar", class: "form-control", required: true %>
         </div>
 
         <div class="mb-3">
-            <%= f.collection_select :group_id, current_user.groups, :id, :name, {prompt: "Select Category"}, {class: "form-select"} %>
+            <%= f.collection_select :group_id, current_user.groups, :id, :name, {prompt: "Select Category"}, {class: "form-select", id: "group"} %>
         </div>
         
         <%= f.submit "Save", class: "btn btn-default w-100 bg-gradient mt-2" %>
