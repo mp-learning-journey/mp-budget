@@ -11,7 +11,7 @@
         <% end %>
         
         <div class="mb-4">
-            <%= f.text_field :name, placeholder: "Enter category name", class: "form-control", required: true %>
+            <%= f.text_field :name, id: "name", placeholder: "Enter category name", class: "form-control", required: true %>
         </div>
 
         <div class="mb-4">
@@ -19,6 +19,6 @@
             <%= f.file_field :icon, placeholder: "Upload category icon", class: "form-control", required: true %>
         </div>
         
-        <%= f.submit "Create Category", class: "w-100 btn btn-default btn-lg bg-gradient mt-2" %>
+        <%= f.submit "Save", class: "w-100 btn btn-default btn-lg bg-gradient mt-2" %>
     <% end %>
 </div>
