@@ -56,7 +56,7 @@
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- Project Presentation -->
-## Project Presentatio <a name="loom-demo"></a>
+## Project Presentation <a name="loom-demo"></a>
 
 - [Loom Walkthrough Link](https://loom.com/share/a5811b03ae1e4f809c29d794bcafed01)
 
