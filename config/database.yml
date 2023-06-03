@@ -81,6 +81,7 @@ test:
 #
 production:
   <<: *default
-  database: mp_budget_production
-  username: mp_budget
-  password: <%= ENV["MP_BUDGET_DATABASE_PASSWORD"] %>
+  url: <%= ENV['DATABASE_URL'] %>
+  database: mpbudget
+  username: mrprotocoll
+  password: <%= ENV['MYSITE_DATABASE_PASSWORD'] %>
