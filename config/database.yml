@@ -82,6 +82,6 @@ test:
 production:
   <<: *default
   url: <%= ENV['DATABASE_URL'] %>
-  database: mpbudget
+  database: recipeapp_i2it
   username: mrprotocoll
   password: <%= ENV['MYSITE_DATABASE_PASSWORD'] %>
