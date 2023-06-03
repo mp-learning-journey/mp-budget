@@ -1,0 +1,28 @@
+<div class="col-md-6 mx-auto">
+    <%= link_to "<< Back", group_path(@id),  class: "back" %>
+
+    <%= form_with model: @purchase, url: group_purchases_path(@id), class: "form mt-3 bg-white pt-3", data: { turbo:false}, local: true do |f| %>
+
+        <% if @purchase.errors.any? %>
+            <div class="alert alert-danger">
+                <% @purchase.errors.full_messages.each do |message| %>
+                    <div><%= message.inspect %></div>
+                <% end %>
+            </div>
+        <% end %>
+        
+        <div class="mb-4">
+            <%= f.text_field :name, id: "name", placeholder: "Enter name", class: "form-control", required: true %>
+        </div>
+
+        <div class="mb-4">
+            <%= f.number_field :amount, id: "amount", placeholder: "Enter Amount in dollar", class: "form-control", required: true %>
+        </div>
+
+        <div class="mb-3">
+            <%= f.collection_select :group_id, current_user.groups, :id, :name, {prompt: "Select Category"}, {class: "form-select", id: "group"} %>
+        </div>
+        
+        <%= f.submit "Save", class: "btn btn-default w-100 bg-gradient mt-2" %>
+    <% end %>
+</div>

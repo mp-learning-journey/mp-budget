@@ -1,0 +1,24 @@
+<div class="col-md-6 mx-auto">
+ <%= link_to "<< Back", authenticated_root_path,  class: "back" %>
+    <%= form_with model: @group, class: "form mt-3 bg-white pt-3 ", data: { turbo:false}, local: true do |f| %>
+
+        <% if @group.errors.any? %>
+            <div class="alert alert-danger">
+                <% @group.errors.full_messages.each do |message| %>
+                    <div><%= message.inspect %></div>
+                <% end %>
+            </div>
+        <% end %>
+        
+        <div class="mb-4">
+            <%= f.text_field :name, id: "name", placeholder: "Enter category name", class: "form-control", required: true %>
+        </div>
+
+        <div class="mb-4">
+            <%= f.label :upload_category_icon, class: "mb-2 ps-2" %>
+            <%= f.file_field :icon, placeholder: "Upload category icon", class: "form-control", required: true %>
+        </div>
+        
+        <%= f.submit "Save", class: "w-100 btn btn-default btn-lg bg-gradient mt-2" %>
+    <% end %>
+</div>

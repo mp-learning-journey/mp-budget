@@ -1,0 +1,19 @@
+<nav class="navbar p-3 py-4">
+  <div class="mobile-overlay"></div>
+  <div class="mobile-foreground"></div>
+  <section class="col-md-6 nav">
+    <ul class="bars">
+      <li class="bar-item"></li>
+      <li class="bar-item"></li>
+      <li class="bar-item"></li>
+    </ul>
+    <h1 class="page-title"><%= @page_name.nil? ? "" : @page_name.upcase  %></h1>
+    <div class="text-white">
+      <% if user_signed_in? %>
+        <li class="nav-item">
+          <%= button_to "Logout", destroy_user_session_path, class: "btn btn-outline-light btn-sm", method: :delete %>
+        </li>
+      <% end %>
+    </div>
+  </section>
+</nav>

@@ -1,0 +1,9 @@
+<div class="d-flex justify-content-between mb-2 border p-2 bg-white gap-2">
+    <div class="">
+        <h4 class="title"><%= purchase.name %></h4>
+        <p class="date"><%= l(purchase.created_at, format: :only_date) %></p>
+    </div>
+    <div class="">
+        <h4 class="total"><%= number_to_currency(purchase.amount) %></h4>
+    </div>
+</div>
