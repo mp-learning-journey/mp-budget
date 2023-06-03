@@ -58,7 +58,7 @@
 <!-- Project Presentation -->
 ## Project Presentation <a name="loom-demo"></a>
 
-- [Loom Walkthrough Link](https://loom.com/share/a5811b03ae1e4f809c29d794bcafed01)
+- [Loom Walkthrough Link](https://www.loom.com/share/0f2457fc1b9247ff96c40eb0cf8cd9f6)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
