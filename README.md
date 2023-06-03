@@ -10,6 +10,8 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
+  - [🚀 Live Demo](#live-demo)
+  - [🚀 Project Live Presentation](#loom-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -39,9 +41,24 @@
 ### Key Features <a name="key-features"></a>
 
 - **[Add budget category]**
-- **[Add Transaction]**
+- **[Add Purchases]**
 - **[User Authentication]**
-- **[View category and Transaction]**
+- **[View category and purchases]**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LIVE DEMO -->
+
+## 🚀 Live Demo <a name="live-demo"></a>
+
+- [Live Demo Link](https://mp-budget.onrender.com/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- Project Presentation -->
+## Project Presentatio <a name="loom-demo"></a>
+
+- [Loom Walkthrough Link](https://loom.com/share/a5811b03ae1e4f809c29d794bcafed01)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
