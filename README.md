@@ -158,7 +158,7 @@ If you like this project, please don't forget to follow me and give it a star.
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to acknowledge and thank [Microverse](https://www.microverse.org/) for providing the resources and the platform for this project.
+I would like to acknowledge and thank [Microverse](https://www.microverse.org/) for providing the resources and the platform for this project, and [Gregoire Vella](https://www.behance.net/gregoirevella) who is the owner of my project original template design.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
