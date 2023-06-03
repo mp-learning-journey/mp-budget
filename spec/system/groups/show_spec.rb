@@ -12,16 +12,16 @@ describe 'Group show page', type: :feature do
     # add groups
     @groups = []
     2.times do |x|
-      group = Group.create(name: "Test Group #{x}", user: @user)
-      group.icon.attach(
+      groups = Group.create(name: "Test Group #{x}", user: @user)
+      groups.icon.attach(
         io: File.open(Rails.root.join('spec', 'fixtures', 'files', 'dominos.png')),
         filename: 'dominos.png',
         content_type: 'image/png'
       )
-      group.save
-      Purchase.create(name: "test purchase #{x}", amount: 100, author: @user, group:)
-      Purchase.create(name: "test purchase #{x}", amount: 50, author: @user, group:)
-      @groups << group
+      groups.save
+      Purchase.create(name: "test purchase #{x}", amount: 100, author: @user, group: groups)
+      Purchase.create(name: "test purchase #{x}", amount: 50, author: @user, group: groups)
+      @groups << groups
     end
 
     visit user_session_path
